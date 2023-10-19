@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import './signin.css'
+import './community.css'
 import InputBox from '../../components/inputBox/inputBox'
 
 
 const Signin = () => {
     const [values, setValues] = useState({
-        username: '',
-        email: '',
-        password: ''
+        community: '',
+        id: ''
     })
 
     const change = (e) => {
@@ -24,28 +23,20 @@ const Signin = () => {
 
     const inputType = [
         {
-            name: "username",
+            name: "community",
             type: "text",
-            placeholder: "Username",
-            error: "Username should be 3-16 characters and shouldn't include any special character!",
+            placeholder: "Community Name",
+            error: "Enter valid Community Name",
             pattern: "^[A-Za-z0-9]{3,16}$",
             required: true,
         },
         {
-            name: 'email',
-            type: 'email',
-            placeholder: 'Email',
-            pattern: '^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]$',
-            error: 'Please enter a valid email',
-            required: true
-        },
-        {
-            name: 'password',
-            type: 'password',
-            placeholder: 'Password',
+            name: 'id',
+            type: 'text',
+            placeholder: 'ID',
             required: true,
             pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
-            error: 'Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!'
+            error: 'Invalid ID'
         }
     ]
 
@@ -56,7 +47,7 @@ const Signin = () => {
     return (
         <div className='container'>
             <form>
-                <span className='title'>Sing-In</span>
+                <span className='title'>Community</span>
                 <div>
                     {inputType.map((input) => (
                         <InputBox
@@ -68,7 +59,7 @@ const Signin = () => {
                         />
                     ))}
                 </div>
-                <button onClick={handleSubmit} type='submit'>Sign In</button>
+                <button onClick={handleSubmit} type='submit'>Join</button>
             </form>
         </div>
     )

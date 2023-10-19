@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import './signin.css'
+import './login.css'
 import InputBox from '../../components/inputBox/inputBox'
 
 
 const Signin = () => {
     const [values, setValues] = useState({
-        username: '',
         email: '',
         password: ''
     })
@@ -24,14 +23,6 @@ const Signin = () => {
 
     const inputType = [
         {
-            name: "username",
-            type: "text",
-            placeholder: "Username",
-            error: "Username should be 3-16 characters and shouldn't include any special character!",
-            pattern: "^[A-Za-z0-9]{3,16}$",
-            required: true,
-        },
-        {
             name: 'email',
             type: 'email',
             placeholder: 'Email',
@@ -45,7 +36,7 @@ const Signin = () => {
             placeholder: 'Password',
             required: true,
             pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
-            error: 'Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!'
+            error: 'Wrong Password'
         }
     ]
 
@@ -56,7 +47,7 @@ const Signin = () => {
     return (
         <div className='container'>
             <form>
-                <span className='title'>Sing-In</span>
+                <span className='title'>Log-In</span>
                 <div>
                     {inputType.map((input) => (
                         <InputBox
@@ -68,7 +59,7 @@ const Signin = () => {
                         />
                     ))}
                 </div>
-                <button onClick={handleSubmit} type='submit'>Sign In</button>
+                <button onClick={handleSubmit} type='submit'>Log In</button>
             </form>
         </div>
     )

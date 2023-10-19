@@ -1,0 +1,22 @@
+body {
+    color: aliceblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: .3rem;
+    border-radius: .3rem;
+    text-indent: .3rem;
+    margin: .2rem 0rem;
+}
+
+.error {
+    color: rgb(211, 94, 94);
+    font-size: 0.8rem;
+    display: none;
+
+}
