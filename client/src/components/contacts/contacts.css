@@ -1,0 +1,11 @@
+.contactContainer {
+    cursor: pointer;
+    /* border: 2px solid rgb(134, 1, 1); */
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.workingSpace,
+.collaborativeSpace {
+    line-height: 1.5;
+}

@@ -1,0 +1,76 @@
+.sideContainer {
+    background-color: #323232;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: rgb(232, 232, 232);
+    border-radius: 0 12px 12px 0;
+}
+
+.firmInfo {
+    flex: 1;
+    border-bottom: 1px solid rgb(135, 135, 135);
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.firmLogo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-size: cover;
+    border: 2px solid rgb(255, 255, 255);
+    object-fit: cover;
+}
+
+.firmData {
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+.shift {
+    margin-left: 200px;
+}
+
+/* .shiftoff {
+    margin: 0 100% 100% 0;
+} */
+
+.off {
+    display: none;
+}
+
+.contacts {
+    flex: 8;
+    border-bottom: 1px solid rgb(135, 135, 135);
+}
+
+.userInfo {
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.userLogo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-size: cover;
+    border: 2px solid rgb(255, 255, 255);
+    object-fit: cover;
+}
+
+.userData {
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+@media (min-width: 651px) {
+    .shift {
+        display: none;
+    }
+}
